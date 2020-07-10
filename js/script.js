@@ -48,8 +48,8 @@ singOut.addEventListener('click', () => {
         // Sign-out successful.
         singIn.style.display = 'none'
         login.style.display = 'block'
-        // elementTotalCart.innerHTML = 0
-        // countBag.innerHTML = 0
+        elementTotalCart.innerHTML = 0
+        countBag.innerHTML = 0
         elementsCart.style.display = 'none'
     }).catch(function (error) {
         // An error happened.
@@ -180,8 +180,8 @@ function clearAll() {
     userSelect.update({
         bag: firebase.firestore.FieldValue.delete()
     });
-    count()
-    calTotal()
+    elementTotalCart.innerHTML = `$${0}`
+    countBag.innerHTML = 0
 }
 
 function clear(element) {
