@@ -48,9 +48,8 @@ singOut.addEventListener('click', () => {
         // Sign-out successful.
         singIn.style.display = 'none'
         login.style.display = 'block'
-        elementTotalCart.innerHTML = 0
-        countBag.innerHTML = 0
-        elementsCart.style.display = 'none'
+
+        clearAll()
     }).catch(function (error) {
         // An error happened.
     });
