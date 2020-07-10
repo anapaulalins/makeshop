@@ -180,8 +180,8 @@ function clearAll() {
     userSelect.update({
         bag: firebase.firestore.FieldValue.delete()
     });
-    // elementTotalCart.innerHTML = 0
-    // countBag.innerHTML = 0
+    count()
+    calTotal()
 }
 
 function clear(element) {
