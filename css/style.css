@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1rem 4rem;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+#bars{
+    margin-right: 1rem;
+    display: none;
+    cursor: pointer;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-ul{
+    display: flex;
+}
+.menu-ul.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:1rem 1rem 1rem 2rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.menu-ul.active li{
+    margin-bottom: 0.6rem;
+    border-left: 0.2rem solid black;
+    padding: 0.3rem;
+}
+.menu-ul li{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+.menu-ul li:hover{
+    font-weight: 600;
+}
+.login-bag{
+    display: flex;
+}
+.login {
+    cursor: pointer; 
+}
+.login span{
+    color: white;
+    background: #000000;
+    padding: 0.2rem;
+    border-radius: 0.2rem; 
+}
+.sing-in{
+    display: flex;
+    margin-left: 0.5rem;
+}
+#sing-out{
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.bag{
+    margin-left: 2rem;
+}
+#count-bag{
+    margin-left: 0.2rem;
+}
+.nov-content{
+    display: flex;
+    background: #e4e4e4;
+    justify-content: center;
+    padding: 0.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.slider-container{
+    width: 90%;
+    margin: auto;
+}
+.slider{
+    display: flex;
+}
+.slide{
+    display: none;
+}
+.slide.active{
+    display: block;
+}
+.slide img{
+    width: 100%;
+    height: 430px;
+}
+.prev,.next{
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    color: rgba(0,0,0,0.8);
+}
+.prev{
+    left: 10%;
+}
+.next{
+    right: 10%;
+}
+.saiba-mais{
+    position: absolute;
+    top: 65%;
+    padding: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+.saiba-mais:hover{
+    background: #000000;
+    color: white;
+}
+.saiba-mais span{
+    font-weight: 600;
+}
+.like-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 4rem 0rem;
+    flex-wrap: wrap;
+}
+.like-content img{
+   border-radius: 50%;
+   cursor: pointer;
+   margin-left: 1rem;
+   margin-top: 0.6rem;
+}
+.like p{
+    margin-top: 0.3rem;
+}
+.like{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.queridinhos-container{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+.title-queridinhos h3{
+    margin-top: 1rem;
+    text-align: center;
+}
+.queridinhos-content{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.queridinhos-box{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.queridinhos-box img{
+    border-radius: 0.5rem;
+}
+.box-content{
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    height: 2.5rem;
+}
+.compra-content{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: black;
+    color: white;
+    padding: 0.3rem;
+    justify-content: center;
+    border-radius: 0.3rem;
+}
+
+.fa-arrow-right{
+    margin-left: 0.3rem;
+}
+
+#btn-bag{
+    cursor: pointer;
+}
+.cart-bag{
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    width: 250px;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+}
+.cart-bag.active{
+    display: block;
+}
+.element-bag img{
+    width: 50px;
+    border-radius: 25%;
+}
+.element-bag{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    justify-content: space-between;
+}
+.element-bag span{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.element-details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    width: 40%;
+}
+#element-trash{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.total-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.cart-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.btn-cart{
+    text-align: center;
+    width: 90%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+#limpar-tudo{
+    border: 0.1rem solid black;
+}
+#comprar{
+    border: 0.1rem solid black;
+    background: black;
+    color: white;
+}
+.queridinho-do-mes{
+    margin-top: 2rem;
+}
+.queridinho-do-mes-content{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.queridinho-do-mes-content .box-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.queridinho-do-mes-img{
+    width: 50%;
+}
+.queridinho-do-mes-img img{
+    width: 100%;
+    height: 500px ;
+}
+.queridinho-do-mes-text{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: #ffff9e;
+}
+.queridinho-do-mes-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    height: 60%;
+}
+.queridinho-do-mes-text-content{
+    width: 50%;
+}
+
+@media (max-width:800px){
+    header{
+        padding: 1rem;
+    }
+    header h2{
+        font-size: 1rem;
+    }
+    #bars{
+        display: block;
+    }
+    .menu-ul{
+        display: none;
+    }
+    .slider img{
+        height: 300px;
+    }
+    .prev,.next{
+        top: 30%;
+    }
+    .saiba-mais{
+        top: 43%;
+        padding: 0.6rem;
+    }
+    .login span{
+        display: none;
+    }
+    .like-content img{
+        width: 100px;
+    }
+    .queridinhos-container{
+        width: 85%;
+    }
+    .queridinho-do-mes-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .queridinho-do-mes-img{
+        width: 100%;
+    }
+    .queridinho-do-mes-img img{
+        height: 350px;
+    }
+    .queridinho-do-mes-text{
+        width: 100%;
+        height: 400px;
+        margin-top: -5px;
+    }
+    .queridinho-do-mes-text-container{
+        height: 85%;
+    }
+    .sing-in p{
+        font-size: 0.8rem;
+    }
+    
+}
+
